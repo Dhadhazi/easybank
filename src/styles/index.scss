@@ -1,30 +1,38 @@
-@import '_variables';
+@import "_variables";
+@import "_mixins";
 
 body {
   margin: 0;
   padding: 0;
   background-color: $lightgrayishblue;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-size: 18px;
   color: $grayishblue;
 }
 
-header {
-width: 100%;
- background-color: white;
- display: flex;
- justify-content: center;
- align-items: center;
+h2 {
+  font-size: 36px;
+  font-weight: 300;
+  color: $darkblue;
 }
 
-#maindiv{
+header {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#maindiv {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#topmenu{
+#topmenu {
   width: 100%;
   max-width: 1152px;
   height: 75px;
@@ -33,42 +41,66 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
 }
+#firstboxcontainer {
+  @include boxcontainer($verylightgray);
+  #firstbox {
+    @include contentbox($grayishblue);
 
-#firstbox{
-  position: relative;
-  width: 100%;
-  max-width: 1152px;
-  height: 650px;
-  #getinvite{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-weight: 300;
-    h1{
-      font-size: 52px;
+    #getinvite {
+      height: 100%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
       font-weight: 300;
-      color: $darkblue;
+      h1 {
+        font-size: 52px;
+        font-weight: 300;
+        color: $darkblue;
+      }
+      span {
+        line-height: 26px;
+        margin-bottom: 25px;
+      }
     }
-    span{
+    #mockups {
+      position: absolute;
+      z-index: 4;
+      top: -280px;
+      right: -300px;
+    }
+    #mockups-bg {
+      position: absolute;
+      z-index: 2;
+      top: -400px;
+      right: -620px;
+    }
+  }
+}
+#secondboxcontainer {
+  @include boxcontainer($lightgrayishblue);
+  z-index: 3;
+  #secondbox {
+    @include contentbox($grayishblue);
+    #description {
+      width: 50%;
       line-height: 26px;
-      margin-bottom: 25px;
     }
-  }
-  #mockups{
-    position: absolute;
-    z-index: -1;
-    top: -100px;
-    right: -300px;
-  }
-  #mockups-bg{
-    position: absolute;
-    z-index: -2;
-    top: -250px;
-    right: -620px;
+    #features {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
-
+#thirdboxcontainer {
+  @include boxcontainer($verylightgray);
+  #thirdbox {
+    @include contentbox($grayishblue);
+    #articles {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Button = styled.button`
   border: 0;
@@ -9,16 +9,17 @@ const Button = styled.button`
   border-radius: 20px;
   color: white;
   font-weight: 400;
-  background: linear-gradient(90deg, hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
-  :hover{
+  background: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%) 0%,
+    hsl(192, 70%, 51%) 100%
+  );
+  :hover {
     opacity: 0.6;
     cursor: pointer;
   }
-
-  `
+`;
 
 export const RequestInviteButton = () => {
-  return (
-    <Button>Request Invite</Button>
-  )
-}
+  return <Button>Request Invite</Button>;
+};

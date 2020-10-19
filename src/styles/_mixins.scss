@@ -1,0 +1,15 @@
+@mixin boxcontainer($color) {
+  width: 100%;
+  background-color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+}
+
+@mixin contentbox($color) {
+  position: relative;
+  width: 100%;
+  max-width: 1152px;
+  color: $color;
+}
