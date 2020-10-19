@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ArticleCard } from './components/ArticleCard';
+import { FeatureCard } from './components/FeatureCard';
+import { RequestInviteButton } from './components/RequestInviteButton';
+import "./styles/index.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <img src="./logo.svg" alt="Easybank Logo" />
+        Home About Contact Blog Carriers
+        <RequestInviteButton />
       </header>
+      <div>
+        <h1>Next Generation digital banking</h1>
+        Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+        <RequestInviteButton />
+        <img src="./images/image-mockups.png" alt="Images of our platform" />
+      </div>
+      <div>
+        <h2>Why choose Easybank?</h2>
+        We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.
+        <FeatureCard />
+      </div>
+      <div>
+        <h2>Latest Articles</h2>
+        <ArticleCard />
+      </div>
+      <footer>
+        <div>
+        <img src="./logo.svg" alt="Easybank Logo" />
+        Social logoes
+        </div>
+        <div>
+          About Us Contact Blog 
+          Careers Support Privacy Policy
+        </div>
+        <div>
+          <RequestInviteButton />
+          © Easybank. All Rights Reserved.
+        </div>
+      </footer>
     </div>
   );
 }
