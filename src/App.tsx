@@ -20,11 +20,13 @@ function App() {
         </span>
         <div><RequestInviteButton /></div></div>
       </header>
-      <div>
+      <div id="firstbox">
+        <div id="getinvite">
         <h1>Next Generation digital banking</h1>
-        Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
-        <RequestInviteButton />
-        <img src="./images/image-mockups.png" alt="Images of our platform" />
+        <span>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+        </span><RequestInviteButton /></div>
+        <img id="mockups-bg" src="./bg-intro-desktop.svg" alt="Background for mockups" />
+       <img id="mockups" src="./images/image-mockups.png" alt="Images of our platform" />
       </div>
       <div>
         <h2>Why choose Easybank?</h2>
