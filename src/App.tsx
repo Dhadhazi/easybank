@@ -2,15 +2,23 @@ import React from 'react';
 import { ArticleCard } from './components/ArticleCard';
 import { FeatureCard } from './components/FeatureCard';
 import { RequestInviteButton } from './components/RequestInviteButton';
-import "./styles/index.scss";
+import { TopmenuItem } from './components/TopmenuItem';
+
+const TOPMENU = ["Home", "About", "Contact","Blog","Carriers"]
 
 function App() {
   return (
-    <div>
+    <div id="maindiv">
       <header>
-        <img src="./logo.svg" alt="Easybank Logo" />
-        Home About Contact Blog Carriers
-        <RequestInviteButton />
+        <div id="topmenu">
+
+        
+        <div><img src="./logo.svg" alt="Easybank Logo" /></div>
+        <span>
+          {TOPMENU.map((title, index)=><TopmenuItem title={title} key={`topmenu-${index}`}/> )}
+          
+        </span>
+        <div><RequestInviteButton /></div></div>
       </header>
       <div>
         <h1>Next Generation digital banking</h1>
