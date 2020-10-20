@@ -2,6 +2,7 @@ import React from "react";
 import { ArticleCard } from "./components/ArticleCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { RequestInviteButton } from "./components/RequestInviteButton";
+import { SocialBox } from "./components/SocialBox";
 import { TopmenuItem } from "./components/TopmenuItem";
 import { TOPMENU, FEATURES, ARTICLES } from "./content";
 
@@ -81,14 +82,22 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>
-        <div>
-          <img src="./logo.svg" alt="Easybank Logo" />
-          Social logoes
-        </div>
-        <div>About Us Contact Blog Careers Support Privacy Policy</div>
-        <div>
-          <RequestInviteButton />© Easybank. All Rights Reserved.
+      <footer id="footercontainer">
+        <div id="footerbox">
+          <div id="footerleft">
+            <div>
+              <img src="./logo-white.svg" alt="Easybank Logo" />
+            </div>
+            <div>
+              <SocialBox />
+            </div>
+          </div>
+          <div id="footermenu">
+            About Us Contact Blog Careers Support Privacy Policy
+          </div>
+          <div id="footerright">
+            <RequestInviteButton />© Easybank. All Rights Reserved.
+          </div>
         </div>
       </footer>
     </div>

@@ -104,3 +104,30 @@ header {
     }
   }
 }
+
+#footercontainer {
+  @include boxcontainer($darkblue);
+  height: 190px;
+  #footerbox {
+    @include contentbox($verylightgray);
+    display: flex;
+    justify-content: space-between;
+    #footerleft {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: space-between;
+    }
+    #footermenu {
+    }
+    #footerright {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: space-between;
+      align-items: flex-end;
+      color: $grayishblue;
+      font-size: 14px;
+    }
+  }
+}

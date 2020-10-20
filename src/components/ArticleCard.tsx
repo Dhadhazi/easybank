@@ -28,6 +28,10 @@ const Title = styled.h3`
   font-size: 16px;
   margin: 5px 0px;
   color: hsl(233, 26%, 24%);
+  :hover {
+    cursor: pointer;
+    color: hsl(136, 65%, 51%);
+  }
 `;
 const Description = styled.span`
   font-size: 12px;
