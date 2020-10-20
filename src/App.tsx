@@ -28,6 +28,16 @@ function App() {
       <div id="firstboxcontainer">
         <div id="firstbox">
           <div id="getinvite">
+            <img
+              id="mockups-bg"
+              src="./bg-intro-desktop.svg"
+              alt="Background for mockups"
+            />
+            <img
+              id="mockups"
+              src="./images/image-mockups.png"
+              alt="Images of our platform"
+            />
             <h1>Next Generation digital banking</h1>
             <span>
               Take your financial life online. Your Easybank account will be a
@@ -36,16 +46,6 @@ function App() {
             </span>
             <RequestInviteButton />
           </div>
-          <img
-            id="mockups-bg"
-            src="./bg-intro-desktop.svg"
-            alt="Background for mockups"
-          />
-          <img
-            id="mockups"
-            src="./images/image-mockups.png"
-            alt="Images of our platform"
-          />
         </div>
       </div>
       <div id="secondboxcontainer">

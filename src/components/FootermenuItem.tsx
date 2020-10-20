@@ -10,6 +10,9 @@ const MenuItem = styled.div`
     cursor: pointer;
     color: hsl(136, 65%, 51%);
   }
+  @media (max-width: 850px) {
+    text-align: center;
+  }
 `;
 
 type Props = {

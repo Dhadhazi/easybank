@@ -14,14 +14,15 @@ h2 {
   font-size: 36px;
   font-weight: 300;
   color: $darkblue;
+  @media (max-width: 850px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 header {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include boxcontainer(white);
+  height: 75px;
   z-index: 5;
 }
 
@@ -33,11 +34,9 @@ header {
 }
 
 #topmenu {
-  width: 100%;
-  max-width: 1152px;
+  @include contentbox(white);
   height: 75px;
   display: flex;
-  background-color: white;
   justify-content: space-between;
   align-items: center;
 }
@@ -77,6 +76,39 @@ header {
       right: -620px;
     }
   }
+  @media (max-width: 850px) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    #firstbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #getinvite {
+        width: 300px;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 80px;
+        h1 {
+          font-size: 36px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      #mockups {
+        z-index: 4;
+        top: -420px;
+        width: 350px;
+        right: auto;
+      }
+      #mockups-bg {
+        z-index: 4;
+        top: -620px;
+        width: 800px;
+        right: -250px;
+      }
+    }
+  }
 }
 #secondboxcontainer {
   @include boxcontainer($lightgrayishblue);
@@ -92,6 +124,26 @@ header {
       justify-content: space-between;
     }
   }
+  @media (max-width: 850px) {
+    margin-top: 20px;
+    height: auto;
+    #secondbox {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      #description {
+        width: 300px;
+        line-height: auto;
+        font-size: 14px;
+      }
+      #features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 }
 
 #thirdboxcontainer {
@@ -103,11 +155,22 @@ header {
       justify-content: space-between;
     }
   }
+  @media (max-width: 850px) {
+    height: auto;
+    #thirdbox {
+      text-align: center;
+      #articles {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 }
 
 #footercontainer {
   @include boxcontainer($darkblue);
   height: 190px;
+
   #footerbox {
     @include contentbox($verylightgray);
     display: flex;
@@ -120,7 +183,6 @@ header {
     }
     #footermenu {
       display: flex;
-      justify-content: row;
       width: 400px;
       flex-wrap: wrap;
     }
@@ -132,6 +194,28 @@ header {
       align-items: flex-end;
       color: $grayishblue;
       font-size: 14px;
+    }
+  }
+  @media (max-width: 850px) {
+    height: 500px;
+    #footerbox {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      #footerleft {
+        height: 80px;
+        align-items: center;
+      }
+      #footermenu {
+        margin: 15px 0px;
+        width: auto;
+        flex-direction: column;
+      }
+      #footerright {
+        height: 75px;
+        align-items: center;
+      }
     }
   }
 }

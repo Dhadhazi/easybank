@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = styled.div`
+const Card = styled.article`
   height: 390px;
   width: 250px;
   background-color: white;
   border-radius: 5px;
+  @media (max-width: 850px) {
+    width: 330px;
+    margin: 15px 0px;
+  }
 `;
 
 const Image = styled.img`
@@ -16,6 +20,7 @@ const Image = styled.img`
 
 const DetailBox = styled.div`
   margin: 0px 25px;
+  text-align: left;
 `;
 
 const Author = styled.h5`
