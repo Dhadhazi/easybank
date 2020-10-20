@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArticleCard } from "./components/ArticleCard";
 import { FeatureCard } from "./components/FeatureCard";
 import { FootermenuItem } from "./components/FootermenuItem";
+import { Menu } from "./components/Menu";
 import { RequestInviteButton } from "./components/RequestInviteButton";
 import { SocialBox } from "./components/SocialBox";
 import { TopmenuItem } from "./components/TopmenuItem";
 import { TOPMENU, FOOTERMENU, FEATURES, ARTICLES } from "./content";
 
 function App() {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <div id="maindiv">
       <header>
@@ -15,16 +18,21 @@ function App() {
           <div>
             <img src="./logo.svg" alt="Easybank Logo" />
           </div>
-          <span>
+          <Menu open={open} setOpen={setOpen} />
+        </div>
+      </header>
+      {open ? (
+        <div id="overlay">
+          <div id="overlay-content">
             {TOPMENU.map((title, index) => (
               <TopmenuItem title={title} key={`topmenu-${index}`} />
             ))}
-          </span>
-          <div>
-            <RequestInviteButton />
           </div>
         </div>
-      </header>
+      ) : (
+        ""
+      )}
+
       <div id="firstboxcontainer">
         <div id="firstbox">
           <div id="getinvite">

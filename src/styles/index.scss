@@ -23,7 +23,8 @@ h2 {
 header {
   @include boxcontainer(white);
   height: 75px;
-  z-index: 5;
+  position: relative;
+  z-index: 15;
 }
 
 #maindiv {
@@ -39,7 +40,43 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 850px) {
+    padding: 20px;
+    height: auto;
+    .desktopmenu {
+      display: none;
+    }
+  }
 }
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  #overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 300px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
 #firstboxcontainer {
   @include boxcontainer($verylightgray);
   #firstbox {
