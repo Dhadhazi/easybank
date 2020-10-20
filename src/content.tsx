@@ -1,4 +1,13 @@
-export const TOPMENU = ["Home", "About", "Contact", "Blog", "Carriers"];
+export const TOPMENU = ["Home", "About", "Contact", "Blog", "Careers"];
+export const FOOTERMENU = [
+  "About Us",
+  "Careers",
+  "Contact",
+  "Support",
+  "Blog",
+
+  "Privacy Policy",
+];
 export const FEATURES = [
   {
     icon: "./icons/icon-online.svg",

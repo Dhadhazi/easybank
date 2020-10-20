@@ -119,6 +119,10 @@ header {
       justify-content: space-between;
     }
     #footermenu {
+      display: flex;
+      justify-content: row;
+      width: 400px;
+      flex-wrap: wrap;
     }
     #footerright {
       display: flex;

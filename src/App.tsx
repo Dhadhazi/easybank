@@ -1,10 +1,11 @@
 import React from "react";
 import { ArticleCard } from "./components/ArticleCard";
 import { FeatureCard } from "./components/FeatureCard";
+import { FootermenuItem } from "./components/FootermenuItem";
 import { RequestInviteButton } from "./components/RequestInviteButton";
 import { SocialBox } from "./components/SocialBox";
 import { TopmenuItem } from "./components/TopmenuItem";
-import { TOPMENU, FEATURES, ARTICLES } from "./content";
+import { TOPMENU, FOOTERMENU, FEATURES, ARTICLES } from "./content";
 
 function App() {
   return (
@@ -93,7 +94,9 @@ function App() {
             </div>
           </div>
           <div id="footermenu">
-            About Us Contact Blog Careers Support Privacy Policy
+            {FOOTERMENU.map((title, index) => (
+              <FootermenuItem title={title} key={`footermenu-${index}`} />
+            ))}
           </div>
           <div id="footerright">
             <RequestInviteButton />© Easybank. All Rights Reserved.
